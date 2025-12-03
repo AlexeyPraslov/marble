@@ -1,0 +1,200 @@
+.kitchen {
+    background: $color-snow;
+
+    &__slider {
+        position: relative;
+        width: 100%;
+        height: 800px;
+
+        @media (max-width: 1023px) {
+            height: 600px;
+        }
+
+        @media (max-width: 767px) {
+            height: 500px;
+        }
+    }
+
+    &__panel {
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+
+        &--text {
+            left: 0;
+        }
+
+        &--image {
+            right: 0;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        height: 100%;
+        transition: none;
+
+        &--ready {
+            transition: margin-top 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+        }
+    }
+
+    &__slide {
+        width: 100%;
+        height: 100%;
+        background: $color-snow;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        position: relative;
+    }
+
+    &__title {
+        font-family: $ff-ysabeau;
+        font-size: 28px;
+
+        color: $color-lochmara;
+        margin: 0 0 16px 0;
+        text-transform: lowercase;
+
+        @media (max-width: 1023px) {
+            font-size: 2.6rem;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 2.2rem;
+        }
+    }
+
+    &__subtitle {
+        font-family: $ff-poiret-one;
+        font-weight: 400;
+
+        margin: 0 0 24px 0;
+        font-size: 48px;
+        line-height: 120%;
+        letter-spacing: 0.48px;
+    }
+
+    &__description {
+        font-size: 20px;
+        line-height: 160%;
+        max-width: 600px;
+
+        margin: 0;
+
+        font-weight: 400;
+
+        line-height: 150%;
+    }
+
+    &__svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 586px;
+        height: 586px;
+        z-index: 1;
+        stroke: $color-sugar-cane;
+        stroke-width: 1;
+        fill: none;
+        animation: spin 40s linear infinite;
+
+        &--pattern-2 {
+            width: 600px;
+            height: 600px;
+        }
+
+        &--pattern-3 {
+            width: 550px;
+            height: 550px;
+            top: 50%;
+            left: 50%;
+        }
+
+        &--pattern-4 {
+            width: 500px;
+            height: 500px;
+
+            top: 50%;
+            left: 50%;
+        }
+    }
+
+    @keyframes spin {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+    }
+
+    &__image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 400px;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__dots {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        z-index: 10;
+    }
+
+    &__dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $color-black-30;
+        cursor: pointer;
+
+        &--active {
+            background: $color-night-rider;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        border: none;
+        background: $color-black-20;
+        color: $color-night-rider;
+        font-size: 24px;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 15;
+
+        &--prev {
+            left: -70px;
+        }
+
+        &--next {
+            right: -60px;
+        }
+    }
+}

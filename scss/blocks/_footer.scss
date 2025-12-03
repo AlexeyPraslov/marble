@@ -1,0 +1,75 @@
+.footer {
+    color: $color-white;
+    padding: 58px 0;
+    margin-top: auto;
+
+    &__top-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $color-black-pearl-15;
+        padding: 0 0 58px 0;
+    }
+
+    &__nav-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 32px;
+    }
+
+    &__socials-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 12px;
+    }
+
+    &__socials-item {
+        width: 24px;
+        height: 24px;
+    }
+
+    &__socials-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    a svg,
+    svg {
+        fill: $color-gainsboro;
+        color: $color-gainsboro;
+    }
+
+    &__bottom-inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        gap: 24px;
+    }
+
+    &__copyright {
+        margin: 0;
+        font-size: 14px;
+        color: $color-grey-chateau;
+    }
+
+    &__links {
+        display: flex;
+        gap: 24px;
+    }
+
+    &__link {
+        font-size: 14px;
+        color: $color-grey-chateau;
+        text-decoration: none;
+
+        &:hover {
+            color: $color-gainsboro;
+        }
+    }
+}

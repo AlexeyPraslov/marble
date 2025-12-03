@@ -1,0 +1,38 @@
+.header {
+    $root: &;
+    height: 90px;
+    padding: 18px 0;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        height: 54px;
+        padding: 5.5px 0;
+    }
+
+    &__nav-list {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+    }
+
+    &__logo {
+        position: absolute;
+        left: calc(50% - 75px);
+        top: 16px;
+    }
+
+    &__btn {
+        min-width: 195px;
+
+        background-color: $color-brown;
+        color: $color-white;
+    }
+}
