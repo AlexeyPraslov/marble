@@ -55,7 +55,7 @@
     &__copyright {
         margin: 0;
         font-size: 14px;
-        color: $color-grey-chateau;
+        color: $color-black-pearl;
     }
 
     &__links {
@@ -65,11 +65,24 @@
 
     &__link {
         font-size: 14px;
-        color: $color-grey-chateau;
+        color: $color-black-pearl;
         text-decoration: none;
+        position: relative;
 
-        &:hover {
-            color: $color-gainsboro;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: $color-black-pearl;
+            clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+            transition: clip-path 0.3s;
+        }
+
+        &:hover::after {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         }
     }
 }
