@@ -48,8 +48,17 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-
+        padding: 40px;
+        box-sizing: border-box;
         position: relative;
+
+        @media (max-width: 1023px) {
+            padding: 30px;
+        }
+
+        @media (max-width: 767px) {
+            padding: 20px;
+        }
     }
 
     &__title {
@@ -77,6 +86,14 @@
         font-size: 48px;
         line-height: 120%;
         letter-spacing: 0.48px;
+
+        @media (max-width: 1023px) {
+            font-size: 3.6rem;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 2.8rem;
+        }
     }
 
     &__description {
@@ -89,6 +106,15 @@
         font-weight: 400;
 
         line-height: 150%;
+
+        @media (max-width: 1023px) {
+            font-size: 1.6rem;
+            max-width: 100%;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 1.4rem;
+        }
     }
 
     &__svg {
@@ -103,34 +129,39 @@
         stroke-width: 1;
         fill: none;
         animation: spin 40s linear infinite;
+        overflow: visible;
+
+        @include vp-1023 {
+            width: 450px;
+            height: 450px;
+
+            left: 80%;
+        }
 
         &--pattern-2 {
-            width: 600px;
-            height: 600px;
+            @include vp-1023 {
+                top: 49%;
+                width: 400px;
+                height: 400px;
+            }
         }
 
         &--pattern-3 {
-            width: 550px;
-            height: 550px;
-            top: 50%;
-            left: 50%;
+            @include vp-1023 {
+                width: 400px;
+                height: 400px;
+
+                left: 82%;
+            }
         }
 
         &--pattern-4 {
-            width: 500px;
-            height: 500px;
+            @include vp-1023 {
+                width: 400px;
+                height: 400px;
 
-            top: 50%;
-            left: 50%;
-        }
-    }
-
-    @keyframes spin {
-        0% {
-            transform: translate(-50%, -50%) rotate(0deg);
-        }
-        100% {
-            transform: translate(-50%, -50%) rotate(360deg);
+                left: 84%;
+            }
         }
     }
 
@@ -145,6 +176,19 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include vp-1023 {
+            width: 300px;
+            height: 300px;
+            left: 82%;
+            top: 50%;
+        }
+
+        @include vp-767 {
+            width: 250px;
+            height: 250px;
+            left: 50%;
+        }
 
         img {
             width: 100%;
@@ -174,27 +218,13 @@
             background: $color-night-rider;
         }
     }
+}
 
-    &__btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        border: none;
-        background: $color-black-20;
-        color: $color-night-rider;
-        font-size: 24px;
-        border-radius: 50%;
-        cursor: pointer;
-        z-index: 15;
-
-        &--prev {
-            left: -70px;
-        }
-
-        &--next {
-            right: -60px;
-        }
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }

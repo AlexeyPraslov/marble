@@ -387,8 +387,9 @@ h1 {
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 1360px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 
 .visually-hidden {
@@ -649,7 +650,20 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: relative;
+}
+@media (max-width: 1023px) {
+  .kitchen__slide {
+    padding: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .kitchen__slide {
+    padding: 20px;
+  }
 }
 .kitchen__title {
   font-family: "Ysabeau", "Arial", sans-serif;
@@ -676,6 +690,16 @@ h1 {
   line-height: 120%;
   letter-spacing: 0.48px;
 }
+@media (max-width: 1023px) {
+  .kitchen__subtitle {
+    font-size: 3.6rem;
+  }
+}
+@media (max-width: 767px) {
+  .kitchen__subtitle {
+    font-size: 2.8rem;
+  }
+}
 .kitchen__description {
   font-size: 20px;
   line-height: 160%;
@@ -683,6 +707,17 @@ h1 {
   margin: 0;
   font-weight: 400;
   line-height: 150%;
+}
+@media (max-width: 1023px) {
+  .kitchen__description {
+    font-size: 1.6rem;
+    max-width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .kitchen__description {
+    font-size: 1.4rem;
+  }
 }
 .kitchen__svg {
   position: absolute;
@@ -698,41 +733,34 @@ h1 {
   fill: none;
   -webkit-animation: spin 40s linear infinite;
           animation: spin 40s linear infinite;
+  overflow: visible;
 }
-.kitchen__svg--pattern-2 {
-  width: 600px;
-  height: 600px;
-}
-.kitchen__svg--pattern-3 {
-  width: 550px;
-  height: 550px;
-  top: 50%;
-  left: 50%;
-}
-.kitchen__svg--pattern-4 {
-  width: 500px;
-  height: 500px;
-  top: 50%;
-  left: 50%;
-}
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: translate(-50%, -50%) rotate(0deg);
-            transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    -webkit-transform: translate(-50%, -50%) rotate(360deg);
-            transform: translate(-50%, -50%) rotate(360deg);
+@media (max-width: 1023px) {
+  .kitchen__svg {
+    width: 450px;
+    height: 450px;
+    left: 80%;
   }
 }
-@keyframes spin {
-  0% {
-    -webkit-transform: translate(-50%, -50%) rotate(0deg);
-            transform: translate(-50%, -50%) rotate(0deg);
+@media (max-width: 1023px) {
+  .kitchen__svg--pattern-2 {
+    top: 49%;
+    width: 400px;
+    height: 400px;
   }
-  100% {
-    -webkit-transform: translate(-50%, -50%) rotate(360deg);
-            transform: translate(-50%, -50%) rotate(360deg);
+}
+@media (max-width: 1023px) {
+  .kitchen__svg--pattern-3 {
+    width: 400px;
+    height: 400px;
+    left: 82%;
+  }
+}
+@media (max-width: 1023px) {
+  .kitchen__svg--pattern-4 {
+    width: 400px;
+    height: 400px;
+    left: 84%;
   }
 }
 .kitchen__image {
@@ -753,6 +781,21 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+@media (max-width: 1023px) {
+  .kitchen__image {
+    width: 300px;
+    height: 300px;
+    left: 82%;
+    top: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .kitchen__image {
+    width: 250px;
+    height: 250px;
+    left: 50%;
+  }
 }
 .kitchen__image img {
   width: 100%;
@@ -782,28 +825,28 @@ h1 {
 .kitchen__dot--active {
   background: #333333;
 }
-.kitchen__btn {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  border: none;
-  background: rgba(0, 0, 0, 0.2);
-  color: #333333;
-  font-size: 24px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 15;
-}
-.kitchen__btn--prev {
-  left: -70px;
-}
-.kitchen__btn--next {
-  right: -60px;
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
+@keyframes spin {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
 .menu {
   position: relative;
   padding: 112px 0;
@@ -1323,7 +1366,8 @@ h1 {
   padding: 112px 0 55px 0;
 }
 .contacts__left-col {
-  min-width: 700px;
+  max-width: 700px;
+  width: 100%;
 }
 .contacts__content {
   display: -webkit-box;
@@ -1353,6 +1397,7 @@ h1 {
   list-style: none;
   padding: 0;
   margin: 0;
+  min-width: 288px;
 }
 .contacts__item {
   display: -webkit-box;

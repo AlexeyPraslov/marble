@@ -2,23 +2,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuSlider = document.querySelector(".kitchen__slider");
     const textContent = document.querySelector('[data-js="text"]');
     const imageContent = document.querySelector('[data-js="image"]');
-    const prevBtn = document.querySelector('[data-js="prev"]');
-    const nextBtn = document.querySelector('[data-js="next"]');
     const dots = document.querySelectorAll(".kitchen__dot");
 
-    console.log('Elements found:', {
-        menuSlider,
-        textContent,
-        imageContent,
-        prevBtn,
-        nextBtn,
-        dots: dots.length
-    });
-
-    const h = menuSlider.offsetHeight;
     let visualIndex = 0;
 
     function update() {
+        const h = menuSlider.offsetHeight;
         const textDOM = 2 + visualIndex;
         const imageDOM = 5 - visualIndex;
         textContent.style.marginTop = `-${textDOM * h}px`;
@@ -36,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 50);
 
     function go(dir) {
+        const h = menuSlider.offsetHeight;
         const toIndex = visualIndex + dir;
 
         if (toIndex < 0) {
@@ -101,13 +91,12 @@ document.addEventListener("DOMContentLoaded", () => {
         { passive: true }
     );
 
-    prevBtn.addEventListener("click", () => go(-1));
-    nextBtn.addEventListener("click", () => go(1));
-
     dots.forEach((dot) => {
         dot.addEventListener("click", () => {
             visualIndex = parseInt(dot.dataset.index, 10);
             update();
         });
     });
+
+    setInterval(() => go(1), 150000);
 });
