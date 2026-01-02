@@ -1,6 +1,10 @@
 .map {
     width: 100%;
     height: 848px;
+
+    @include vp-767 {
+        height: 400px;
+    }
 }
 
 .leaflet-control-attribution {

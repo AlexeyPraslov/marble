@@ -9,6 +9,11 @@
         align-items: center;
         border-bottom: 1px solid $color-black-pearl-15;
         padding: 0 0 58px 0;
+
+        @include vp-767 {
+            flex-direction: column;
+            gap: 40px;
+        }
     }
 
     &__nav-list {
@@ -17,6 +22,12 @@
         margin: 0;
         display: flex;
         gap: 32px;
+
+        @include vp-767 {
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
     }
 
     &__socials-list {
@@ -50,6 +61,11 @@
         align-items: center;
         margin-top: 40px;
         gap: 24px;
+
+        @include vp-767 {
+            flex-direction: column-reverse;
+            gap: 16px;
+        }
     }
 
     &__copyright {
@@ -61,6 +77,12 @@
     &__links {
         display: flex;
         gap: 24px;
+
+        @include vp-767 {
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+        }
     }
 
     &__link {
@@ -68,6 +90,7 @@
         color: $color-black-pearl;
         text-decoration: none;
         position: relative;
+        width: fit-content;
 
         &::after {
             content: "";
@@ -83,6 +106,21 @@
 
         &:hover::after {
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        @include vp-767 {
+            &::after {
+                display: none;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                height: 1px;
+                background: $color-black-pearl;
+            }
         }
     }
 }

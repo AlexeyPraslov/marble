@@ -1,5 +1,5 @@
 .about {
-    padding: 112px 0;
+    padding: 112px 0 0 0;
     overflow: hidden;
     background-color: $color-solitude;
     position: relative;
@@ -26,13 +26,10 @@
     &__left {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+
         margin: 0 0 80px 0;
 
         @include vp-767 {
-            margin: 0;
-
-            align-items: center;
         }
     }
 
@@ -41,6 +38,8 @@
 
         @include vp-767 {
             margin: 0 0 48px 0;
+            display: flex;
+            justify-content: center;
         }
     }
 
@@ -51,11 +50,13 @@
         line-height: 150%;
         letter-spacing: 12px;
         text-transform: uppercase;
+        color: $color-shades-of-brown;
 
-        @include vp-767 {
+        @include vp-1023 {
             font-size: 16px;
             letter-spacing: 8px;
             margin: 0 0 12px 0;
+            display: flex;
         }
     }
 
@@ -114,6 +115,12 @@
         .pattern:nth-child(2) {
             position: absolute;
             top: 267px;
+            left: -30px;
+        }
+
+        .pattern:nth-child(3) {
+            position: absolute;
+            top: 645px;
             left: -30px;
         }
 

@@ -28,10 +28,12 @@
         display: none;
         background: transparent;
         cursor: pointer;
-        padding: 0;
+        padding: 6px;
 
         @include vp-767 {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border: none;
         }
 
@@ -142,7 +144,7 @@
     }
 
     &__btn {
-        min-width: 195px;
+        width: fit-content;
 
         background-color: $color-brown;
         color: $color-white;

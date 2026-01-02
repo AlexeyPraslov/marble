@@ -1,5 +1,8 @@
 .kitchen {
     background: $color-snow;
+    @include vp-767 {
+        display: none;
+    }
 
     &__slider {
         position: relative;

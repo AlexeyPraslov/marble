@@ -3,12 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0>
-  <meta http-equiv=" X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/splide.min.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <title>городское бистро - MARBLE</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -114,6 +116,9 @@
                 height="800" alt="фото ресторана">
             </picture>
             <div class="about__pattern-inner">
+              <svg class="pattern" width="741" height="750" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#pattern"></use>
+              </svg>
               <svg class="pattern" width="741" height="750" aria-hidden="true">
                 <use xlink:href="images/sprite.svg#pattern"></use>
               </svg>
@@ -312,6 +317,91 @@
         </div>
     </section>
 
+    <section class="kitchen-mobile">
+      <div class="container">
+        <div class="kitchen-swiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="kitchen-mobile__card">
+                <h2 class="kitchen-mobile__title">кухня</h2>
+                <p class="kitchen-mobile__subtitle">Основное меню</p>
+                <p class="kitchen-mobile__description">Авторская интерпретация европейской и русской кухни, где классика
+                  соседствует с неожиданными сочетаниями вкусов. Команда шеф-повара создаёт блюда на открытой кухне —
+                  каждое движение становится частью вашего гастрономического опыта.</p>
+                <div class="kitchen-mobile__img-inner">
+                  <svg class="kitchen-mobile__svg kitchen-mobile__svg--pattern-1" viewBox="0 0 586 586"
+                    preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#pattern-1"></use>
+                  </svg>
+                  <img class="kitchen-mobile__img" src="./images/kitchen-mobile-menu-1.png"
+                    srcset="./images/kitchen-mobile-menu-1@2x.png 2x" width="267" height="267" alt="фото ресторана">
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="kitchen-mobile__card">
+                <h2 class="kitchen-mobile__title">кухня</h2>
+                <p class="kitchen-mobile__subtitle">Основное меню</p>
+                <p class="kitchen-mobile__description">Авторская интерпретация европейской и русской кухни, где классика
+                  соседствует с неожиданными сочетаниями вкусов. Команда шеф-повара создаёт блюда на открытой кухне —
+                  каждое движение становится частью вашего гастрономического опыта.</p>
+                <div class="kitchen-mobile__img-inner">
+                  <svg class="kitchen-mobile__svg kitchen-mobile__svg--pattern-2" viewBox="0 0 586 586"
+                    preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#pattern-2"></use>
+                  </svg>
+                  <img class="kitchen-mobile__img" src="./images/kitchen-mobile-menu-2.png"
+                    srcset="./images/kitchen-mobile-menu-2@2x.png 2x" width="267" height="267" alt="фото ресторана">
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="kitchen-mobile__card">
+                <h2 class="kitchen-mobile__title">кухня</h2>
+                <p class="kitchen-mobile__subtitle">Основное меню</p>
+                <p class="kitchen-mobile__description">Авторская интерпретация европейской и русской кухни, где классика
+                  соседствует с неожиданными сочетаниями вкусов. Команда шеф-повара создаёт блюда на открытой кухне —
+                  каждое движение становится частью вашего гастрономического опыта.</p>
+                <div class="kitchen-mobile__img-inner">
+                  <svg class="kitchen-mobile__svg kitchen-mobile__svg--pattern-3" viewBox="0 0 550 550"
+                    preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#pattern-3"></use>
+                  </svg>
+                  <img class="kitchen-mobile__img" src="./images/kitchen-mobile-menu-3.png"
+                    srcset="./images/kitchen-mobile-menu-3@2x.png 2x" width="267" height="267" alt="фото ресторана">
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="kitchen-mobile__card">
+                <h2 class="kitchen-mobile__title">кухня</h2>
+                <p class="kitchen-mobile__subtitle">Основное меню</p>
+                <p class="kitchen-mobile__description">Авторская интерпретация европейской и русской кухни, где классика
+                  соседствует с неожиданными сочетаниями вкусов. Команда шеф-повара создаёт блюда на открытой кухне —
+                  каждое движение становится частью вашего гастрономического опыта.</p>
+                <div class="kitchen-mobile__img-inner">
+                  <svg class="kitchen-mobile__svg kitchen-mobile__svg--pattern-4" viewBox="0 0 500 500"
+                    preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#pattern-4"></use>
+                  </svg>
+                  <img class="kitchen-mobile__img" src="./images/kitchen-mobile-menu-4.png"
+                    srcset="./images/kitchen-mobile-menu-4@2x.png 2x" width="267" height="267" alt="фото ресторана">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Пагинация (опционально) -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
     <section class="menu" id="menu">
       <img class="menu__background-img" src="./images/back-img.jpg" alt="background">
       <div class="container">
@@ -363,108 +453,6 @@
         <div class="promo__slider splide">
           <div class="promo__track splide__track">
             <div class="promo__list splide__list">
-              <div class="promo__slide splide__slide">
-                <a href="#" class="promo__card" data-popup="promo-1">
-                  <div class="promo__image">
-                    <picture class="promo__picture">
-                      <img src="./images/promo-1@1x.jpg" srcset="./images/promo-1@2x.jpg 2x" alt="Счастливые часы">
-                    </picture>
-                    <span class="promo__badge">Акция</span>
-                  </div>
-                  <div class="promo__content">
-                    <h3 class="promo__card-title">Счастливые часы</h3>
-                    <p class="promo__description">Счастливые часы с 16:00 до 18:00 — скидка 20% на всё барное меню.
-                      Идеальное начало вечера в MARBLE.</p>
-                    <span class="promo__link">Подробнее</span>
-                  </div>
-                </a>
-              </div>
-              <div class="promo__slide splide__slide">
-                <div class="promo__card">
-                  <div class="promo__image">
-                    <picture class="promo__picture">
-                      <img src="./images/promo-2@1x.jpg" srcset="./images/promo-2@2x.jpg 2x"
-                        alt="Комплименты на день рождения">
-                    </picture>
-                    <span class="promo__badge">Скидка</span>
-                  </div>
-                  <div class="promo__content">
-                    <h3 class="promo__card-title">Комплименты на день рождения</h3>
-                    <p class="promo__description">Отметьте день рождения в MARBLE — десерт от шефа в подарок при
-                      бронировании на компанию от 4 человек.</p>
-                    <a href="#" class="promo__link" data-popup="promo-2">Подробнее</a>
-                  </div>
-                </div>
-              </div>
-              <div class="promo__slide splide__slide">
-                <div class="promo__card">
-                  <div class="promo__image">
-                    <picture class="promo__picture">
-                      <img src="./images/promo-3@1x.jpg" srcset="./images/promo-3@2x.jpg 2x"
-                        alt="Бронирование на праздники">
-                    </picture>
-                    <span class="promo__badge">Новинка</span>
-                  </div>
-                  <div class="promo__content">
-                    <h3 class="promo__card-title">Бронирование на праздники</h3>
-                    <p class="promo__description">Забронируйте столик на Новый год до 30 ноября — скидка 15% на
-                      банкетное меню</p>
-                    <a href="#" class="promo__link" data-popup="promo-3">Подробнее</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="promo__slide splide__slide">
-                <a href="#" class="promo__card" data-popup="promo-1">
-                  <div class="promo__image">
-                    <picture class="promo__picture">
-                      <img src="./images/promo-1@1x.jpg" srcset="./images/promo-1@2x.jpg 2x" alt="Счастливые часы">
-                    </picture>
-                    <span class="promo__badge">Акция</span>
-                  </div>
-                  <div class="promo__content">
-                    <h3 class="promo__card-title">Счастливые часы</h3>
-                    <p class="promo__description">Счастливые часы с 16:00 до 18:00 — скидка 20% на всё барное меню.
-                      Идеальное начало вечера в MARBLE.</p>
-                    <span class="promo__link">Подробнее</span>
-                  </div>
-                </a>
-              </div>
-              <div class="promo__slide splide__slide">
-                <div class="promo__card">
-                  <div class="promo__image">
-                    <picture class="promo__picture">
-                      <img src="./images/promo-2@1x.jpg" srcset="./images/promo-2@2x.jpg 2x"
-                        alt="Комплименты на день рождения">
-                    </picture>
-                    <span class="promo__badge">Скидка</span>
-                  </div>
-                  <div class="promo__content">
-                    <h3 class="promo__card-title">Комплименты на день рождения</h3>
-                    <p class="promo__description">Отметьте день рождения в MARBLE — десерт от шефа в подарок при
-                      бронировании на компанию от 4 человек.</p>
-                    <a href="#" class="promo__link" data-popup="promo-2">Подробнее</a>
-                  </div>
-                </div>
-              </div>
-              <div class="promo__slide splide__slide">
-                <div class="promo__card">
-                  <div class="promo__image">
-                    <picture class="promo__picture">
-                      <img src="./images/promo-3@1x.jpg" srcset="./images/promo-3@2x.jpg 2x"
-                        alt="Бронирование на праздники">
-                    </picture>
-                    <span class="promo__badge">Новинка</span>
-                  </div>
-                  <div class="promo__content">
-                    <h3 class="promo__card-title">Бронирование на праздники</h3>
-                    <p class="promo__description">Забронируйте столик на Новый год до 30 ноября — скидка 15% на
-                      банкетное меню</p>
-                    <a href="#" class="promo__link" data-popup="promo-3">Подробнее</a>
-                  </div>
-                </div>
-              </div>
-
               <div class="promo__slide splide__slide">
                 <a href="#" class="promo__card" data-popup="promo-1">
                   <div class="promo__image">
@@ -624,16 +612,6 @@
             stroke-linejoin="round" />
         </svg>
       </button>
-      <button class="popup__nav popup__nav--prev">
-        <svg width="20" height="20" aria-hidden="true">
-          <use xlink:href="images/sprite.svg#arrow-left"></use>
-        </svg>
-      </button>
-      <button class="popup__nav popup__nav--next">
-        <svg width="20" height="20" aria-hidden="true">
-          <use xlink:href="images/sprite.svg#arrow-right"></use>
-        </svg>
-      </button>
       <div class="popup__image">
         <img src="" alt="" id="popup-image">
       </div>
@@ -724,12 +702,12 @@
   </footer>
 
   <script src="js/splide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="js/menu-slide.js"></script>
   <script src="js/promo-slide.js"></script>
+  <script src="js/mobile-slider.js"></script>
   <script src="js/burger-menu.js"></script>
-
-
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="js/map.js"></script>
   <script src="js/smooth-scroll.js"></script>
 </body>

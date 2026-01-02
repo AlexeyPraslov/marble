@@ -28,8 +28,6 @@
         }
     }
 
-
-
     &__half {
         flex: 1;
         display: flex;
@@ -61,18 +59,18 @@
         font-weight: bold;
         margin-bottom: 20px;
         line-height: 1.2;
-        color: white;
+        color: $color-white;
     }
 
     &__subtitle {
         font-size: 20px;
         line-height: 1.5;
-        color: rgba(255, 255, 255, 0.9);
+        color: $color-white-90;
     }
 
     &__description {
         font-size: 16px;
-        color: black;
+        color: $color-black;
     }
 
     &__image-wrapper {
@@ -88,7 +86,7 @@
         height: 600px;
         object-fit: cover;
         border-radius: 8px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 10px 30px $color-black-30;
         margin: 0 auto;
         display: block;
     }

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const splide = new Splide(".promo__slider", {
         perPage: 3,
-        perMove: 3,
+        perMove: 1,
         focus: 0,
         pagination: false,
         arrows: false,
@@ -15,6 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
             prev: "Предыдущий слайд",
             next: "Следующий слайд",
         },
+        breakpoints: {
+            767: {
+                perPage: 1,
+                perMove: 1,
+            },
+        },
     });
 
     const pagination = document.querySelector(".promo__pagination");
@@ -25,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     pagination.addEventListener("click", (e) => {
         if (e.target.classList.contains("promo__dot")) {
             const page = parseInt(e.target.getAttribute("data-page"));
-            splide.go(page * 3);
+            splide.go(page);
         }
     });
 
@@ -40,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Обновление активной точки
     splide.on("moved", (newIndex) => {
-        const activePage = Math.floor(newIndex / 3);
+        const activePage = newIndex;
         document.querySelectorAll(".promo__dot").forEach((dot, index) => {
             dot.classList.toggle("promo__dot--active", index === activePage);
         });
@@ -84,7 +90,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Получаем данные из карточки
                 const img = card.querySelector(".promo__picture img");
-                const titleElement = card.querySelector(".promo__title") || card.querySelector(".promo__card-title");
+                const titleElement =
+                    card.querySelector(".promo__title") ||
+                    card.querySelector(".promo__card-title");
                 const title = titleElement.textContent;
                 const description = card.querySelector(
                     ".promo__description"
@@ -114,15 +122,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (card) {
                     // Получаем данные из карточки
                     const img = card.querySelector(".promo__picture img");
-                    const titleElement = card.querySelector(".promo__title") || card.querySelector(".promo__card-title");
+                    const titleElement =
+                        card.querySelector(".promo__title") ||
+                        card.querySelector(".promo__card-title");
                     const title = titleElement.textContent;
-                    const description = card.querySelector(".promo__description").textContent;
+                    const description = card.querySelector(
+                        ".promo__description"
+                    ).textContent;
 
                     // Заполняем попап
                     popupImage.src = img.src;
                     popupImage.alt = img.alt;
                     popupTitle.textContent = title;
-                    popupDescription.textContent = description + " Подробное описание промо-акции с дополнительной информацией.";
+                    popupDescription.textContent =
+                        description +
+                        " Подробное описание промо-акции с дополнительной информацией.";
 
                     // Открываем попап
                     popup.classList.add("popup--active");

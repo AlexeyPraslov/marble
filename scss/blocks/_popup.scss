@@ -29,7 +29,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background: #fff;
+        background: $color-white;
         border-radius: 8px;
         max-width: 600px;
         width: 90%;
@@ -44,7 +44,7 @@
         width: 40px;
         height: 40px;
         border: none;
-        background: rgba(0, 0, 0, 0.1);
+        background: $color-black-20;
         border-radius: 50%;
         cursor: pointer;
         z-index: 1;
@@ -55,11 +55,11 @@
         margin: 0;
 
         &:hover {
-            background: rgba(0, 0, 0, 0.2);
+            background: $color-black-20;
         }
 
         svg {
-            fill: #333;
+            fill: $color-night-rider;
             display: block;
             margin: 0;
             padding: 0;
@@ -86,47 +86,13 @@
     &__title {
         font-size: 28px;
         margin: 0 0 16px 0;
-        color: #333;
+        color: $color-night-rider;
     }
 
     &__description {
         font-size: 16px;
         line-height: 1.6;
         margin: 0;
-        color: #666;
-    }
-
-    &__nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 40px;
-        height: 40px;
-        border: none;
-        background: rgba(0, 0, 0, 0.1);
-        border-radius: 50%;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 2;
-
-        &:hover {
-            background: rgba(0, 0, 0, 0.2);
-        }
-
-        &--prev {
-            left: 15px;
-        }
-
-        &--next {
-            right: 15px;
-        }
-
-        svg {
-            width: 20px;
-            height: 20px;
-            fill: #333;
-        }
+        color: $color-night-rider;
     }
 }
