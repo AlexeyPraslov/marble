@@ -5,6 +5,7 @@
         position: relative;
         width: 100%;
         height: 800px;
+        overflow: hidden;
 
         @media (max-width: 1023px) {
             height: 600px;
@@ -20,14 +21,15 @@
         top: 0;
         width: 50%;
         height: 100%;
-        overflow: hidden;
 
         &--text {
             left: 0;
+            overflow: hidden;
         }
 
         &--image {
             right: 0;
+            overflow: visible;
         }
     }
 
@@ -51,6 +53,7 @@
         padding: 40px;
         box-sizing: border-box;
         position: relative;
+        z-index: 2;
 
         @media (max-width: 1023px) {
             padding: 30px;
@@ -88,7 +91,8 @@
         letter-spacing: 0.48px;
 
         @media (max-width: 1023px) {
-            font-size: 3.6rem;
+            font-size: 3rem;
+            line-height: 70%;
         }
 
         @media (max-width: 767px) {
@@ -108,7 +112,7 @@
         line-height: 150%;
 
         @media (max-width: 1023px) {
-            font-size: 1.6rem;
+            font-size: 1rem;
             max-width: 100%;
         }
 
@@ -122,46 +126,56 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 586px;
-        height: 586px;
+        width: 550px;
+        height: 550px;
         z-index: 1;
         stroke: $color-sugar-cane;
         stroke-width: 1;
         fill: none;
         animation: spin 40s linear infinite;
-        overflow: visible;
 
         @include vp-1023 {
             width: 450px;
             height: 450px;
-
-            left: 80%;
+            top: 50%;
+            left: 81%;
         }
 
         &--pattern-2 {
+            top: 49%;
+            left: 51%;
+
             @include vp-1023 {
-                top: 49%;
-                width: 400px;
-                height: 400px;
+                width: 450px;
+                height: 450px;
+                top: 51%;
+                left: 81%;
             }
         }
 
         &--pattern-3 {
             @include vp-1023 {
-                width: 400px;
-                height: 400px;
-
-                left: 82%;
+                width: 422px;
+                height: 422px;
+                top: 50%;
+                left: 81%;
             }
         }
 
         &--pattern-4 {
-            @include vp-1023 {
-                width: 400px;
-                height: 400px;
+            width: 500px;
+            height: 500px;
 
-                left: 84%;
+            @include vp-1023 {
+                width: 420px;
+                height: 420px;
+                top: 50%;
+                left: 87%;
             }
+        }
+
+        @include vp-1023 {
+            animation: none;
         }
     }
 

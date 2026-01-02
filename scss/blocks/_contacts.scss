@@ -1,14 +1,23 @@
 .contacts {
     padding: 112px 0 55px 0;
 
+    @include vp-1023 {
+        padding: 80px 0;
+    }
+
     &__left-col {
         max-width: 700px;
         width: 100%;
     }
 
+    &__right-col {
+        display: flex;
+    }
+
     &__content {
         display: flex;
         gap: 80px;
+        align-items: center;
     }
 
     &__title {

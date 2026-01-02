@@ -15,6 +15,9 @@
   <header class="header">
     <div class="container">
       <div class="header__content">
+        <button class="header__burger-menu" type="button" aria-label="открыть меню">
+          <span class="header__burger-line"></span>
+        </button>
         <nav class="header__nav">
           <ul class="header__nav-list">
             <li class="header__nav-item">
@@ -48,7 +51,12 @@
       </picture>
       <div class="container">
         <div class="hero__content">
-          <img class="hero__logo" src="./images/hero-logo.png" width="362" height="122" alt="Логотип MARBLE">
+          <picture class="hero__logo-box">
+            <source media="(max-width: 767px)" srcset="./images/hero-logo-mobile.png">
+
+            <img class="hero__logo" src="./images/hero-logo.png" width="362" height="122" alt="Логотип MARBLE">
+          </picture>
+
           <h1 class="hero__title">стильное городское бистро в самом сердце Москвы</h1>
           <p class="hero__text">Европейская кухня с русским характером в интерьерах эпохи ар-деко</p>
           <div class="hero__links-inner">
@@ -67,9 +75,11 @@
           <div class="about__left">
 
             <picture class="about__img-box">
-              <source media="(max-width: 767px)" srcset="./images/about-mobile.jpg 1x, ./images/about-mobile@2x.jpg 2x">
+              <source media="(max-width: 767px)"
+                srcset="./images/about-img-mobile.jpg 1x, ./images/about-img-mobile@2x.jpg 2x">
 
-              <source media="(max-width: 1023px)" srcset="./images">
+              <source media="(max-width: 1023px)"
+                srcset="./images/about-img-1-tablet.jpg 1x, ./images/about-img-1-tablet@2x.jpg 2x">
 
               <img class="about__img" src="./images/about.jpg" srcset="./images/about-img@2x.jpg 2x" width="320"
                 height="320" alt="фото ресторана">
@@ -93,9 +103,12 @@
           </div>
           <div class="about__right">
             <picture class="about__img-box">
-              <source media="(max-width: 767px)" srcset="./images/about-mobile.jpg 1x, ./images/about-mobile@2x.jpg 2x">
+              <source media="(max-width: 767px)"
+                srcset="./images/about-img-mobile-2.jpg 1x, ./images/about-img-mobile-2@2x.jpg 2x">
 
-              <source media="(max-width: 1023px)" srcset="./images">
+              <source media="(max-width: 1023px)"
+                srcset="./images/about-img-2-tablet.jpg 1x, ./images/about-img-2-tablet@2x.jpg 2x">
+
 
               <img class="about__img" src="./images/about-img-1.jpg" srcset="./images/about-img-1@2x.jpg 2x" width="608"
                 height="800" alt="фото ресторана">
@@ -198,7 +211,8 @@
 
               <!-- картинка 2 завтраки -->
               <div class="kitchen__slide">
-                <svg class="kitchen__svg kitchen__svg--pattern-2" viewBox="0 0 586 586" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                <svg class="kitchen__svg kitchen__svg--pattern-2" viewBox="0 0 586 586"
+                  preserveAspectRatio="xMidYMid meet" aria-hidden="true">
                   <use xlink:href="images/sprite.svg#pattern-2"></use>
                 </svg>
                 <picture class="kitchen__image">
@@ -208,7 +222,8 @@
 
               <!-- картинка 1 основное меню -->
               <div class="kitchen__slide">
-                <svg class="kitchen__svg kitchen__svg--pattern-1" viewBox="0 0 586 586" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                <svg class="kitchen__svg kitchen__svg--pattern-1" viewBox="0 0 586 586"
+                  preserveAspectRatio="xMidYMid meet" aria-hidden="true">
                   <use xlink:href="images/sprite.svg#pattern-1"></use>
                 </svg>
                 <picture class="kitchen__image">
@@ -218,7 +233,8 @@
 
               <!-- картинка 4 бар -->
               <div class="kitchen__slide">
-                <svg class="kitchen__svg kitchen__svg--pattern-4" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                <svg class="kitchen__svg kitchen__svg--pattern-4" viewBox="0 0 500 500"
+                  preserveAspectRatio="xMidYMid meet" aria-hidden="true">
                   <use xlink:href="images/sprite.svg#pattern-4"></use>
                 </svg>
                 <picture class="kitchen__image">
@@ -228,7 +244,8 @@
 
               <!-- картинка 3 бизнес ланчи -->
               <div class="kitchen__slide">
-                <svg class="kitchen__svg kitchen__svg--pattern-3" viewBox="0 0 550 550" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                <svg class="kitchen__svg kitchen__svg--pattern-3" viewBox="0 0 550 550"
+                  preserveAspectRatio="xMidYMid meet" aria-hidden="true">
                   <use xlink:href="images/sprite.svg#pattern-3"></use>
                 </svg>
                 <picture class="kitchen__image">
@@ -239,7 +256,8 @@
               <!-- дубли -->
               <!-- картинка 2 завтраки дубль-->
               <div class="kitchen__slide">
-                <svg class="kitchen__svg kitchen__svg--pattern-2" viewBox="0 0 586 586" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                <svg class="kitchen__svg kitchen__svg--pattern-2" viewBox="0 0 586 586"
+                  preserveAspectRatio="xMidYMid meet" aria-hidden="true">
                   <use xlink:href="images/sprite.svg#pattern-2"></use>
                 </svg>
                 <picture class="kitchen__image">
@@ -249,7 +267,8 @@
 
               <!-- картинка 1 основное меню дубль -->
               <div class="kitchen__slide">
-                <svg class="kitchen__svg kitchen__svg--pattern-1" viewBox="0 0 586 586" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                <svg class="kitchen__svg kitchen__svg--pattern-1" viewBox="0 0 586 586"
+                  preserveAspectRatio="xMidYMid meet" aria-hidden="true">
                   <use xlink:href="images/sprite.svg#pattern-1"></use>
                 </svg>
                 <picture class="kitchen__image">
@@ -259,7 +278,8 @@
 
               <!-- картинка 4 бар дубль -->
               <div class="kitchen__slide">
-                <svg class="kitchen__svg kitchen__svg--pattern-4" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                <svg class="kitchen__svg kitchen__svg--pattern-4" viewBox="0 0 500 500"
+                  preserveAspectRatio="xMidYMid meet" aria-hidden="true">
                   <use xlink:href="images/sprite.svg#pattern-4"></use>
                 </svg>
                 <picture class="kitchen__image">
@@ -269,7 +289,8 @@
 
               <!-- картинка 3 бизнес ланчи дубль -->
               <div class="kitchen__slide">
-                <svg class="kitchen__svg kitchen__svg--pattern-3" viewBox="0 0 550 550" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                <svg class="kitchen__svg kitchen__svg--pattern-3" viewBox="0 0 550 550"
+                  preserveAspectRatio="xMidYMid meet" aria-hidden="true">
                   <use xlink:href="images/sprite.svg#pattern-3"></use>
                 </svg>
                 <picture class="kitchen__image">
@@ -705,6 +726,7 @@
   <script src="js/splide.min.js"></script>
   <script src="js/menu-slide.js"></script>
   <script src="js/promo-slide.js"></script>
+  <script src="js/burger-menu.js"></script>
 
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

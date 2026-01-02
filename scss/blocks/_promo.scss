@@ -1,6 +1,15 @@
 .promo {
     padding: 112px 0;
     background-color: $color-solitude;
+    overflow: hidden;
+
+    @include vp-1023 {
+        padding: 80px 0;
+    }
+
+    .container {
+        overflow: visible;
+    }
 
     &__title {
         font-size: 48px;
@@ -16,6 +25,8 @@
 
     &__slider {
         position: relative;
+        margin: 0 -40px;
+        padding: 0 40px;
     }
 
     &__slide {

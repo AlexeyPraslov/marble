@@ -4,20 +4,44 @@
     background-color: $color-solitude;
     position: relative;
 
+    @include vp-1023 {
+        padding: 80px 0 0 0;
+    }
+
     &__content {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 64px;
+
+        @include vp-1023 {
+            grid-template-columns: 1fr;
+            gap: 80px;
+        }
+
+        @include vp-767 {
+            gap: 48px;
+        }
     }
 
     &__left {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        margin: 0 0 80px 0;
+
+        @include vp-767 {
+            margin: 0;
+
+            align-items: center;
+        }
     }
 
     &__img-box {
         margin: 0 0 80px 0;
+
+        @include vp-767 {
+            margin: 0 0 48px 0;
+        }
     }
 
     &__title {
@@ -27,6 +51,12 @@
         line-height: 150%;
         letter-spacing: 12px;
         text-transform: uppercase;
+
+        @include vp-767 {
+            font-size: 16px;
+            letter-spacing: 8px;
+            margin: 0 0 12px 0;
+        }
     }
 
     &__subtitle {
@@ -40,6 +70,15 @@
         letter-spacing: 8px;
 
         margin: 0 0 50px 0;
+
+        @include vp-1023 {
+            font-size: 28px;
+            margin: 0 0 24px 0;
+        }
+
+        @include vp-767 {
+            margin: 0 0 20px 0;
+        }
     }
 
     &__description {
@@ -50,6 +89,11 @@
 
     &__right {
         position: relative;
+
+        @include vp-1023 {
+            display: flex;
+            justify-content: center;
+        }
     }
 
     &__pattern-inner {
@@ -71,6 +115,10 @@
             position: absolute;
             top: 267px;
             left: -30px;
+        }
+
+        @include vp-1023 {
+            display: none;
         }
     }
 
