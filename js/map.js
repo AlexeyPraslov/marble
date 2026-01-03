@@ -14,10 +14,10 @@ L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
 
 // Создаем маркер с PNG изображением
 const markerIcon = L.icon({
-    iconUrl: './images/logo.png',
+    iconUrl: "./images/logo.webp",
     iconSize: [50, 50],
     iconAnchor: [25, 50],
-    popupAnchor: [0, -50]
+    popupAnchor: [0, -50],
 });
 
 L.marker([55.749521, 37.605267], {
